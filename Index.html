@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="carnaval.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap-reboot.min.css">
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+   
+    <link rel="stylesheet" href="/bootstrap/css/datepicker.css">
+
+    <script src="/bootstrap/js/bootstrap-datepicker.js"></script>
+   
+    <title>EVOEH</title>
+  </head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">EVOEH</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>   
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Cadastrar Catálogo</a>
+          </li>             
+        </ul>           
+      </div>
+  </nav>
+  <div id="main" class="container-fluid">
+    <!-- <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">Hello, world!</h1>
+            <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
+          </div>
+      </div> -->      
+        
+        <div class="row d-flex justify-content-center">
+            <form class="col-md-7 col-md-offset-3">
+              <br><br><br>
+              <h3>Cadastrar Catálogo</h3>
+              <hr>
+                <div class="form-group row">
+                  <label  class="col-sm-2 col-form-label">Título: </label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="titulo" placeholder="Informe o Título" required>
+                  </div>
+                </div>  
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Tipo: </label>
+                    <div class="col-sm-10">
+                        <select class="custom-select" id="tipo" required>
+                            <option selected>Escolha</option>
+                            <option value="Livro">Livro</option>
+                            <option value="Revista">Revista</option>
+                          </select>  
+                      </div>
+                </div> 
+                <div class="form-group row">
+                    <label for="example-date-input" class="col-2 col-form-label">Data de Publicação:</label>
+                    <div class="col-10">
+                        <input id="datepicker" width="276" />
+                        <script>
+                          
+                            $('#datepicker').datepicker({                           
+                        
+                              format: 'dd/mm/yyyy',
+                              language: 'pt-BR',
+                               uiLibrary: 'bootstrap4' ,                   
+                             
+                               
+                            });
+                            
+                        </script>
+                    </div>
+                </div>                  
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Número Edição: </label>
+                    <div class="col-sm-10">
+                      <input type="number" class="form-control" id="numeroEdicao" placeholder="Informe o número de Edição" required>
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Autor(a): </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="autor" placeholder="Informe o Autor(a)" required>
+                    </div>
+                </div> 
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Editora: </label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="editora" placeholder="Informe a Editora" required>
+                    </div>
+                </div>  
+                <div class="form-group row">
+                    <label  class="col-sm-2 col-form-label">Descrição: </label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" id="descricao" rows="3" required></textarea>
+                    </div>
+                </div>   
+                <div class="form-group row">
+                  <label  class="col-sm-2 col-form-label">Anexar Imagem: </label>                       
+                    <div class="col-sm-10">
+                        <div class="custom-file">
+                          <label class="custom-file-label">Escolher Imagem...</label>
+                          <input type="file" class="custom-file-input" id="imagem" required>    
+                        </div>                    
+                    </div>
+                </div>                                                      
+                <button type="button" class="btn btn-danger">Cancelar</button>
+                <button type="submit" class="btn btn-info">Salvar</button>
+              </form>
+        </div>             
+  </div>      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         
+  <script>
+  $('.datepicker').datepicker({
+    format: 'mm/dd/yyyy',
+    startDate: '-3d'
+});</script>
+  </body>
+  </html>
