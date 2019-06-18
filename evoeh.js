@@ -48,8 +48,7 @@ $(function() {
 			numeroEdicao: $("#numeroEdicao").val(),    
 			autor: $("#autor").val(),
 			editora: $("#editora").val() ,
-			descricao: $("#descricao").val(),
-			imagem: $("#imagem").val(),			
+			descricao: $("#descricao").val(),		
 		}
 		
 		$.ajax({  
