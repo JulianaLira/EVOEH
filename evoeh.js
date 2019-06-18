@@ -18,8 +18,7 @@ $(function() {
 			numeroEdicao: $("#numeroEdicao").val(),    
 			autor: $("#autor").val(),
 			editora: $("#editora").val() ,
-			descricao: $("#descricao").val(),
-			imagem: $("#imagem").val(),			
+			descricao: $("#descricao").val(),		
 		}
 		
 		$.ajax({  
@@ -44,7 +43,7 @@ $(function() {
 		var dadosjson = {
 	        titulo: $("#titulo").val(),
 			tipo: $("#tipo").val(),
-			data: $("#datepicker").val(),
+			dataP: $("#datepicker").val(),
 			numeroEdicao: $("#numeroEdicao").val(),    
 			autor: $("#autor").val(),
 			editora: $("#editora").val() ,
@@ -52,7 +51,7 @@ $(function() {
 		}
 		
 		$.ajax({  
-		  type: "POST",  
+		  type: "PUT",  
 		  url: "http://localhost:8080/rest-api/alterar/id",  
 		  data: JSON.stringify(dadosjson),		  	  
 		  dataType: "json",
